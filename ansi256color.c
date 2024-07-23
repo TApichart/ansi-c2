@@ -22,14 +22,19 @@ int main (int argc, char* argv[]) {
 	for (ic=0; ic<256; ic++) {
 		setFolor (ic);
 		printf ("%d ", ic);
-	}	putchar ('\n');
+	}	printf ("\n\n");
 	for (ic=0; ic<256; ic++) {
 		setBolor (ic);
 		printf ("%d ", ic);
-	}	putchar ('\n');
+	}	printf ("\n\n");
 	for (ic=0; ic<256; ic++) {
 		setBolor (ic);
-		setFolor (255-ic);
+		setFolor (255 ^ ic);
+		printf ("%d ", ic);
+	}	printf ("\n\n");
+	for (ic=0; ic<256; ic++) {
+		setFolor (ic);
+		setBolor (255 ^ ic);
 		printf ("%d ", ic);
 	}	putchar ('\n');
 	pRST ();
