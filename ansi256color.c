@@ -29,7 +29,7 @@ int main (int argc, char* argv[]) {
 	}	putchar ('\n');
 	for (ic=0; ic<256; ic++) {
 		setBolor (ic);
-		setFolor (265-ic);
+		setFolor (255-ic);
 		printf ("%d ", ic);
 	}	putchar ('\n');
 	pRST ();
